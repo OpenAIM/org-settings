@@ -1,1 +1,25 @@
+# Configuration for Remove-Outside-Collaborators
 
+# Turn on Monitor Mode [SET ON BY DEFAULT]. In this mode Collaborators are not removed, only an Issue is created
+monitorOnly: true
+
+# Enables detection and removal of any Outside Collaborator being added to the assigned repositories
+enableCollaboratorRemoval: true
+
+# Issue Title when an Outside Collaborator is added
+removedIssueTitle: '[CRITICAL] An Outside Collaborator has been added to this Repository!'
+
+# Issue Body when an Outside Collaborator is added
+removedIssueBody: 'NOTE: Outside Collaborators are disabled for this organization! <br/> This member has been removed. Please contact an admin to override.'
+
+# Issue Title when monitor mode is enabled
+monitorIssueTitle: '[CRITICAL] Outside Collaborator Added'
+
+# Issue Body when monitor mode is enable
+monitorIssueBody: 'Please note that the adding of Outside Collaborators is prohibited!'
+
+# Users/Groups that should be cc'ed on the issue. Should be users/groups separated by a space.
+ccList: '@jmerlan @vdubya'
+
+# Collaborators to exclude in detection. Should be a List of Strings.
+excludeCollaborators: ['jmerlan', 'vdubya']
